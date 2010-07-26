@@ -1,0 +1,11 @@
+extension = ""
+
+=font-face(!font,!filename, !type = "opentype")
+  font-family:  \#{!font}
+  src: url("fonts/\#{!filename}.eot")
+  @if !type == "opentype"
+    !extension = "otf"
+  @else
+    !extension = "ttf"
+
+  src: local("\#{!font} Regular"), local("\#{!font}-Regular"), local("\#{!font}"), url("fonts/\#{!filename}.\#{!extension}") format("\#{!type}")
