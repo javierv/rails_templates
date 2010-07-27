@@ -1,4 +1,3 @@
-gem 'responders'
 gem 'devise'
 gem 'will_paginate', ">= 3.0.pre"
 gem 'paperclip'
@@ -41,6 +40,9 @@ file "app/stylesheets/application.sass", read_file("application.sass")
 # Templates
 file "lib/templates/test_unit/scaffold/functional_test.rb",
   read_file("test_unit/scaffold/functional_test.rb")
+
+file "lib/templates/rails/scaffold_controller/controller.rb",
+  read_file("rails/scaffold_controller/controller.rb")
 
 # Gitignore
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore public/stylesheets/.gitignore"
