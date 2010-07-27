@@ -13,7 +13,6 @@ gem 'simple_form'
 gem 'meta_where'
 gem 'meta_search'
 
-gem 'bullet', :group => :development
 gem 'rails3-generators', :group => :development
 
 gem 'shoulda', :group => :test
