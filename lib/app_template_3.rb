@@ -4,7 +4,6 @@ gem 'will_paginate', ">= 3.0.pre"
 gem 'paperclip'
 gem 'haml'
 gem 'compass'
-gem 'delayed_job'
 gem 'acts-as-taggable-on'
 gem 'validation_reflection'
 gem 'RedCloth'
