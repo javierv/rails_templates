@@ -1,6 +1,6 @@
 gem 'responders'
 gem 'devise', ">= 1.1rc1"
-gem 'will_paginate'
+gem 'will_paginate', ">= 3.0.pre"
 gem 'paperclip'
 gem 'haml'
 gem 'compass'
