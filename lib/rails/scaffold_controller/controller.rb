@@ -9,7 +9,7 @@ class <%= controller_class_name %>Controller < ApplicationController
 
 <% unless options[:singleton] -%>
   def index
-    @<%= table_name %> = <%= orm_class.all(class_name) %>
+    @<%= table_name %> = <%= orm_class.paginate(class_name, :page => params[:page]) %>
     respond_with(@<%= table_name %>)
   end
 <% end -%>
