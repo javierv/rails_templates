@@ -24,11 +24,11 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def create
-    <%= "flash[:notice] = '#{class_name} was successfully created.' if " %>@<%= orm_instance.save %>    
+    <%= "flash[:notice] = '#{class_name} se creó correctamente.' if " %>@<%= orm_instance.save %>
   end
 
   def update
-    <%= "flash[:notice] = '#{class_name} was successfully updated.' if " %>@<%= orm_instance.save %>
+    <%= "flash[:notice] = '#{class_name} se actualizó correctamente.' if " %>@<%= orm_instance.save %>
   end
 
   def destroy
