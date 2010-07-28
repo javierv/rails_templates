@@ -32,7 +32,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def destroy
-    @<%= orm_instance.destroy %>
+    <%= "flash[:notice] = '#{class_name} se borró correctamente.' if " %>@<%= orm_instance.destroy %>
   end
 
 private

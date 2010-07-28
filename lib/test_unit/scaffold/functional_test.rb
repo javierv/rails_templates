@@ -87,7 +87,7 @@ class <%= class_name %>ControllerTest < ActionController::TestCase
     end
 
     should redirect_to('index') { <%= plural_name %>_path }
-    # should_set_the_flash_to //
+    should set_the_flash
     should "destroy model" do
       assert !<%= class_name %>.exists?(@<%= singular_name %>.id)
     end
