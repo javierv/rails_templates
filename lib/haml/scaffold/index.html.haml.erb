@@ -1,0 +1,5 @@
+- title "Listado de <%= plural_name %>"
+
+= table_for(@<%= plural_name %>) {|table| table.data(:actions => :all)}
+
+= link_to 'New <%= singular_name %>', new_<%= singular_name %>_path

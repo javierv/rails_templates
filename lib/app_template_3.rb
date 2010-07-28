@@ -10,6 +10,7 @@ gem 'validates_date_time'
 gem 'simple_form'
 gem 'meta_where'
 gem 'meta_search'
+gem 'tabletastic', :git => "http://github.com/jgdavey/tabletastic.git"
 
 gem 'rails3-generators', :group => :development
 
@@ -43,6 +44,9 @@ file "lib/templates/test_unit/scaffold/functional_test.rb",
 
 file "lib/templates/rails/scaffold_controller/controller.rb",
   read_file("rails/scaffold_controller/controller.rb")
+
+file "lib/templates/haml/scaffold/index.html.haml.erb",
+  read_file("haml/scaffold/index.html.haml.erb")
 
 # Gitignore
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore public/stylesheets/.gitignore"
