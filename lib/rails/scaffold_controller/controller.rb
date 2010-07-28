@@ -1,5 +1,6 @@
 class <%= controller_class_name %>Controller < ApplicationController
   respond_to :html
+  before_filter :find_<%= file_name %>, :only => :show, :edit, :update, :destroy
 
 <% unless options[:singleton] -%>
   def index
@@ -8,8 +9,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 <% end -%>
 
-  def show
-    @<%= file_name %> = <%= orm_class.find(class_name, "params[:id]") %>
+  def show    
     respond_with(@<%= file_name %>)
   end
 
@@ -19,7 +19,6 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def edit
-    @<%= file_name %> = <%= orm_class.find(class_name, "params[:id]") %>
   end
 
   def create
@@ -29,14 +28,17 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def update
-    @<%= file_name %> = <%= orm_class.find(class_name, "params[:id]") %>
     <%= "flash[:notice] = '#{class_name} was successfully updated.' if " %>@<%= orm_instance.update_attributes("params[:#{file_name}]") %>
     respond_with(@<%= file_name %>)
   end
 
   def destroy
-    @<%= file_name %> = <%= orm_class.find(class_name, "params[:id]") %>
     @<%= orm_instance.destroy %>
     respond_with(@<%= file_name %>)
+  end
+
+private
+  def find_<%= file_name %>
+    @<%= file_name %> = <%= orm_class.find(class_name, "params[:id]") %>
   end
 end
