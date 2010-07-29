@@ -35,7 +35,6 @@ run "rm app/stylesheets/*.sass"
 run "mkdir app/stylesheets/partials"
 
 file "app/stylesheets/partials/_base.sass", read_file("_base.sass")
-file "app/stylesheets/partials/_utils.sass", read_file("_utils.sass")
 file "app/stylesheets/application.sass", read_file("application.sass")
 
 # Templates
