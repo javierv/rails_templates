@@ -7,8 +7,6 @@ class <%= controller_class_name %>Controller < ApplicationController
   before_filter :new_<%= file_name %>, :only => [:new, :create]
   before_filter :update_<%= file_name %>, :only => :update
 
-  after_filter :respond_with_<%= file_name %>, :except => :index
-
 <% unless options[:singleton] -%>
   def index
     @search = <%= class_name %>.search params[:search]
@@ -19,24 +17,30 @@ class <%= controller_class_name %>Controller < ApplicationController
 <% end -%>
 
   def show
+    respond_with @<%= file_name %>
   end
 
   def new
+    respond_with @<%= file_name %>
   end
 
   def edit
+    respond_with @<%= file_name %>
   end
 
   def create
     <%= "flash[:notice] = '#{class_name} se creó correctamente.' if " %>@<%= file_name %>.save
+    respond_with @<%= file_name %>
   end
 
   def update
     <%= "flash[:notice] = '#{class_name} se actualizó correctamente.' if " %>@<%= file_name %>.save
+    respond_with @<%= file_name %>
   end
 
   def destroy
     <%= "flash[:notice] = '#{class_name} se borró correctamente.' if " %>@<%= file_name %>.destroy
+    respond_with @<%= file_name %>
   end
 
 private
@@ -50,9 +54,5 @@ private
 
   def update_<%= file_name %>
     @<%= file_name %>.attributes = params[:<%= file_name %>]
-  end
-
-  def respond_with_<%= file_name %>
-    respond_with @<%= file_name %>
   end
 end
