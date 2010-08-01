@@ -26,15 +26,15 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def create
-    <%= "flash[:notice] = '#{class_name} se creó correctamente.' if " %>@<%= orm_instance.save %>
+    <%= "flash[:notice] = '#{class_name} se creó correctamente.' if " %>@<%= file_name %>.save
   end
 
   def update
-    <%= "flash[:notice] = '#{class_name} se actualizó correctamente.' if " %>@<%= orm_instance.save %>
+    <%= "flash[:notice] = '#{class_name} se actualizó correctamente.' if " %>@<%= file_name %>.save
   end
 
   def destroy
-    <%= "flash[:notice] = '#{class_name} se borró correctamente.' if " %>@<%= orm_instance.destroy %>
+    <%= "flash[:notice] = '#{class_name} se borró correctamente.' if " %>@<%= file_name %>.destroy
   end
 
 private
