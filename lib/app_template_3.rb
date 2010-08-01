@@ -34,7 +34,6 @@ run "compass config --app rails --sass-dir app/stylesheets --css-dir public/styl
 run "rm app/stylesheets/*.sass"
 run "mkdir app/stylesheets/partials"
 
-file "app/stylesheets/partials/_base.sass", read_file("_base.sass")
 file "app/stylesheets/application.sass", read_file("application.sass")
 
 # Templates
