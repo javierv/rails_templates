@@ -12,7 +12,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     @search = <%= orm_class.search(class_name, "params[:search]") %>
     @<%= table_name %> = @search.paginate :page => params[:page],
       :per_page => <%= orm_class.per_page(class_name) %>
-    respond_with(@<%= table_name %>)
+    respond_with @<%= table_name %>
   end
 <% end -%>
 
