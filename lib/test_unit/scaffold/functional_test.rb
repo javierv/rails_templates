@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class <%= controller_class_name %>ControllerTest < ActionController::TestCase
+  tests <%= controller_class_name %>Controller
+
   setup do
     @<%= singular_name %> = Factory(:<%= singular_name %>)
   end
