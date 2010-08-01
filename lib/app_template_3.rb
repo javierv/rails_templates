@@ -7,7 +7,7 @@ gem 'acts-as-taggable-on'
 gem 'validation_reflection'
 gem 'RedCloth'
 gem 'validates_date_time'
-gem 'simple_form'
+gem 'simple_form', :git => "/home/javi/programas/work/simple_form"
 gem 'meta_where'
 gem 'meta_search'
 gem 'tabletastic', :git => "/home/javi/programas/work/tabletastic"

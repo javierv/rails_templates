@@ -1,5 +1,12 @@
 - title "Listado de <%= plural_name %>"
 
+= simple_form_for @search, :class => 'search' do |form|
+  <%- for attribute in attributes -%>
+  = form.input :<%= attribute.name + "_contains" %>, :label => '<%= attribute.name.titleize %>',
+    :required => false
+  <%- end -%>
+  = form.submit 'Buscar'
+
 = table_for @<%= plural_name %> do |table|
   = table.data(:actions => :all)
 
