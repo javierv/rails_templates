@@ -8,6 +8,9 @@
   = form.submit 'Buscar'
 
 = table_for @<%= plural_name %> do |table|
-  = table.data(:actions => :all)
+  = table.data :actions => :all do
+    <%- for attribute in attributes -%>
+    = table.cell :<%= attribute.name %>, :heading => sort_link(@search, :<%= attribute.name %>)
+    <%- end -%>
 
 = link_to 'New <%= singular_name %>', new_<%= singular_name %>_path
