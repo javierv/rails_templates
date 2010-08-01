@@ -68,18 +68,22 @@ run "rm config/initializers/inflections.rb"
 file  "config/initializers/inflections.rb", read_file("inflections.rb")
 file  "app/helpers/layout_helper.rb", read_file("layout_helper.rb")
 
+# Idioma de la aplicación
+application "  config.time_zone  = 'Madrid'"
+application "  config.i18n.default_locale = :es"
+
+# Generadores por defecto
+application "  config.generators do |g|
+      g.stylesheets false
+      g.template_engine :haml
+      g.test_framework :shoulda
+      g.fixture_replacement :factory_girl
+      g.form_builder :simple_form
+      g.fallbacks[:shoulda] = :test_unit
+    end"
+
 # Commit
 run "echo TODO > README"
 git :init
 git :add => "."
 git :commit => "-m 'Primer commit'"
-
-# Generadores (aparte)
-#config.generators do |g|
-#  g.stylesheets false
-#  g.template_engine :haml
-#  g.test_framework :shoulda
-#  g.fixture_replacement :factory_girl
-#  g.form_builder :simple_form
-#  g.fallbacks[:shoulda] = :test_unit 
-#end
