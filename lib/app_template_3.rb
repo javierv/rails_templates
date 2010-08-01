@@ -10,7 +10,7 @@ gem 'validates_date_time'
 gem 'simple_form'
 gem 'meta_where'
 gem 'meta_search'
-gem 'tabletastic', :git => "http://github.com/jgdavey/tabletastic.git"
+gem 'tabletastic', :git => "/home/javi/programas/work/tabletastic"
 
 gem 'rails3-generators', :group => :development
 
