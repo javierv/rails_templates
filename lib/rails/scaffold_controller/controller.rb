@@ -1,7 +1,7 @@
 class <%= controller_class_name %>Controller < ApplicationController
   respond_to :html
 
-  before_filter :find_<%= file_name %>, :only => :show, :edit, :update, :destroy
+  before_filter :find_<%= file_name %>, :only => [:show, :edit, :update, :destroy]
   before_filter :new_<%= file_name %>, :only => [:new, :create]
   before_filter :update_<%= file_name %>, :only => :update
 
