@@ -12,7 +12,7 @@ ActiveSupport::Inflector.inflections do |inflect|
     ['n', 's'].each do |consonante|
       final_singular = vocal_con_acento + consonante
       final_plural = vocal_sin_acento + consonante + 'es'
-      inflect.plural /(.*)\#{final_singular}$/i, '\\1' + final_plural
+      inflect.plural /(.*)#{final_singular}$/i, '\\1' + final_plural
       #La siguiente línea la comento porque los nombres de tablas no tienen acentos
       #inflect.singular /(.*)\#{final_plural}$/i, '\\1' + final_singular
     end
