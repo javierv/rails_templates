@@ -66,6 +66,8 @@ run "wget -O config/locales/es.yml http://github.com/svenfuchs/rails-i18n/raw/ma
 
 run "rm config/initializers/inflections.rb"
 file  "config/initializers/inflections.rb", read_file("inflections.rb")
+file "test/unit/pluralize_test.rb", read_file("pluralize_test.rb")
+
 file  "app/helpers/layout_helper.rb", read_file("layout_helper.rb")
 
 # Idioma de la aplicación
