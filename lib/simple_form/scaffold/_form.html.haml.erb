@@ -1,0 +1,10 @@
+= simple_form_for @<%= file_name %> do |form|
+
+  = render 'shared/errors', :record => @<%= file_name %>
+
+<%- for attribute in attributes -%>
+  = form.input :<%= attribute.name %>, :label => '<%= attribute.name.titleize %>'
+<%- end -%>
+
+  .actions
+    = form.button :submit
