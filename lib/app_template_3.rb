@@ -88,6 +88,7 @@ application "  config.i18n.default_locale = :es"
 # Generadores por defecto
 application "  config.generators do |g|
       g.stylesheets false
+      g.helper false
       g.template_engine :haml
       g.test_framework :shoulda
       g.fixture_replacement :factory_girl
