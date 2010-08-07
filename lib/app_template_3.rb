@@ -37,6 +37,12 @@ run "mkdir app/stylesheets/partials"
 file "app/stylesheets/application.sass", read_file("application.sass")
 
 # Templates
+file "lib/templates/shoulda/model/model.rb",
+  read_file("shoulda/model/model.rb")
+
+file "lib/templates/active_record/model/model.rb",
+  read_file("active_record/model/model.rb")
+
 file "lib/templates/test_unit/scaffold/functional_test.rb",
   read_file("test_unit/scaffold/functional_test.rb")
 
