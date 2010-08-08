@@ -35,8 +35,8 @@ file "app/views/layouts/application.html.haml", read_file("application.html.haml
 
 # SASS
 run "compass config --app rails --sass-dir app/stylesheets --css-dir public/stylesheets"
-run "rm app/stylesheets/*.sass"
-run "mkdir app/stylesheets/partials"
+run "rm -r app/stylesheets/"
+run "cp -R #{file_path("stylesheets")} app/"
 
 file "app/stylesheets/application.sass", read_file("application.sass")
 
