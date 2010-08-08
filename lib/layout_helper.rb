@@ -18,6 +18,10 @@ module LayoutHelper
     end
   end
 
+  def css(*args)
+    stylesheet *args
+  end
+
   def javascript(*args)
     @javascripts ||= []
     args.each do |javascript|
