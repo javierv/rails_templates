@@ -22,7 +22,11 @@ gem 'capybara', :group => :test
 run "bundle install"
 
 def read_file(file)
-  File.read(File.expand_path(File.join(File.dirname(__FILE__), file)))
+  File.read(File.expand_path(file_path(file)))
+end
+
+def file_path(file)
+  File.join(File.dirname(__FILE__), file)
 end
 
 # Layout
@@ -57,6 +61,7 @@ file "lib/templates/simple_form/scaffold/_form.html.haml.erb",
 
 file "app/views/shared/_errors.html.haml", read_file("shared/_errors.html.haml")
 
+run "cp -R #{file_path("javascripts/markitup")} public/javascripts/"
 # Gitignore
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore public/stylesheets/.gitignore"
 
