@@ -59,9 +59,9 @@ file "lib/templates/haml/scaffold/index.html.haml.erb",
 file "lib/templates/simple_form/scaffold/_form.html.haml.erb",
   read_file("simple_form/scaffold/_form.html.haml.erb")
 
-file "app/views/shared/_errors.html.haml", read_file("shared/_errors.html.haml")
-
+run "cp -R #{file_path("shared")} app/views/"
 run "cp -R #{file_path("javascripts/markitup")} public/javascripts/"
+file "public/javascripts/form.js", read_file("javascripts/form.js")
 # Gitignore
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore public/stylesheets/.gitignore"
 
