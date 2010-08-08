@@ -38,8 +38,6 @@ run "compass config --app rails --sass-dir app/stylesheets --css-dir public/styl
 run "rm -r app/stylesheets/"
 run "cp -R #{file_path("stylesheets")} app/"
 
-file "app/stylesheets/application.sass", read_file("application.sass")
-
 # Templates
 file "lib/templates/shoulda/model/model.rb",
   read_file("shoulda/model/model.rb")
