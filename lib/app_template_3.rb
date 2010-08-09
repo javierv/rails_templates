@@ -18,6 +18,7 @@ gem 'shoulda', :group => :test
 gem 'factory_girl_rails', :group => :test
 gem 'mocha', :group => :test
 gem 'capybara', :group => :test
+gem 'display_name'
 
 run "bundle install"
 
