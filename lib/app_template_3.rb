@@ -52,8 +52,7 @@ file "lib/templates/test_unit/scaffold/functional_test.rb",
 file "lib/templates/rails/scaffold_controller/controller.rb",
   read_file("rails/scaffold_controller/controller.rb")
 
-file "lib/templates/haml/scaffold/index.html.haml.erb",
-  read_file("haml/scaffold/index.html.haml.erb")
+run "cp -R #{file_path("haml")} lib/templates/"
 
 file "lib/templates/simple_form/scaffold/_form.html.haml.erb",
   read_file("simple_form/scaffold/_form.html.haml.erb")
