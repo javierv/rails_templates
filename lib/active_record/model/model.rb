@@ -3,4 +3,5 @@ class <%= class_name %> < ActiveRecord::Base
   <%- for attribute in attributes -%>
   validates :<%= attribute.name %>, :presence => true
   <%- end -%>
+  display_name :<%= attributes.first.name %>
 end
