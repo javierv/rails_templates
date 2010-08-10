@@ -1,0 +1,5 @@
+== Templates
+
+This is a project just to experiment with different possibilities about customizing Rails templates and generators.
+
+It is not intended to be used in real applications, although some of the ideas in the templates might be interesting.
