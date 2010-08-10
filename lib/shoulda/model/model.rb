@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'test_helper'
 
 class <%= class_name %>Test < ActiveSupport::TestCase
