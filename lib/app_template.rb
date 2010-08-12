@@ -40,22 +40,7 @@ run "rm -r app/stylesheets/"
 run "cp -R #{file_path("stylesheets")} app/"
 
 # Templates
-file "lib/templates/shoulda/model/model.rb",
-  read_file("shoulda/model/model.rb")
-
-file "lib/templates/active_record/model/model.rb",
-  read_file("active_record/model/model.rb")
-
-file "lib/templates/test_unit/scaffold/functional_test.rb",
-  read_file("test_unit/scaffold/functional_test.rb")
-
-file "lib/templates/rails/scaffold_controller/controller.rb",
-  read_file("rails/scaffold_controller/controller.rb")
-
-run "cp -R #{file_path("haml")} lib/templates/"
-
-file "lib/templates/simple_form/scaffold/_form.html.haml.erb",
-  read_file("simple_form/scaffold/_form.html.haml.erb")
+run "cp -R #{file_path("templates")} lib/"
 
 run "cp -R #{file_path("shared")} app/views/"
 run "cp -R #{file_path("javascripts/markitup")} public/javascripts/"
