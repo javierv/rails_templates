@@ -66,8 +66,7 @@ run "rm config/initializers/inflections.rb"
 file  "config/initializers/inflections.rb", read_file("inflections.rb")
 file "test/unit/pluralize_test.rb", read_file("pluralize_test.rb")
 
-file  "app/helpers/layout_helper.rb", read_file("layout_helper.rb")
-file  "app/helpers/css_js_helper.rb", read_file("css_js_helper.rb")
+run "cp #{file_path("helpers")}/* app/helpers/"
 
 # Idioma de la aplicación
 application "  config.time_zone  = 'Madrid'"
