@@ -99,6 +99,10 @@ application "  config.generators do |g|
       g.fallbacks[:shoulda] = :test_unit
     end"
 
+# Inicializadores
+generate :"haml:install"
+generate :"simple_form:install"
+
 # Commit
 run "echo TODO > README"
 git :init
