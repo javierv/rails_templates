@@ -72,8 +72,7 @@ run "rm public/images/rails.png"
 run "rm public/index.html"
 
 # Javascript
-run "wget -O public/javascripts/jquery.js http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"
-run "wget -O public/javascripts/rails.js http://github.com/rails/jquery-ujs/raw/master/src/rails.js"
+generate :"jquery:install"
 
 # Traducciones
 run "wget -O config/locales/es.yml http://github.com/svenfuchs/rails-i18n/raw/master/rails/locale/es.yml"
